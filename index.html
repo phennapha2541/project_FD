@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
+
+  <title>Document</title>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDxSowNwNJaGK0XAkmhZ0qVt-vKT0GS614",
+      authDomain: "food247-10746.firebaseapp.com",
+      databaseURL: "https://food247-10746.firebaseio.com",
+      projectId: "food247-10746",
+      storageBucket: "food247-10746.appspot.com",
+      messagingSenderId: "780845371970",
+      appId: "1:780845371970:web:e0f57513c268e832d093db"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+    // Initialize Cloud Firestore through Fireba
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+        window.location.href = 'home.html'
+      } else {
+        // User is signed out.
+        window.location.href = 'login.html'
+      }
+    });  
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
